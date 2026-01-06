@@ -1,0 +1,9 @@
+venv/
+__pycache__/
+*.pyc
+data/plant_data.db
+data/mosquitto/
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
