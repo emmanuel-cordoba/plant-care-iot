@@ -1,0 +1,21 @@
+services:
+  collector:
+    build: ./app
+    container_name: data-collector
+    volumes:
+      - ./data:/app/data
+    environment:
+      - MQTT_HOST=broker.hivemq.com
+      - MQTT_PORT=1883
+      - MQTT_TOPIC=dalarna/iot/plantcare
+    restart: unless-stopped
+
+  dashboard:
+    build: ./app
+    container_name: plant-dashboard
+    command: python dashboard.py
+    ports:
+      - "5001:5000"
+    volumes:
+      - ./data:/app/data
+    restart: unless-stopped
