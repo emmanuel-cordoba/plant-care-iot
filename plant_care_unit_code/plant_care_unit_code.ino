@@ -4,8 +4,8 @@
 #include <LiquidCrystal_I2C.h>
 #include "DHT.h"
 
-const char* WIFI_SSID = "Telia-3A66D3";
-const char* WIFI_PASS = "6wmrWdFxKfvWAcmd";
+const char* WIFI_SSID = "nnnn"; //credentials
+const char* WIFI_PASS = "xxxx"; //wifi password
 const char* MQTT_SERVER = "broker.hivemq.com";
 const int MQTT_PORT = 1883;
 const char* MQTT_TOPIC = "dalarna/iot/plantcare/";
